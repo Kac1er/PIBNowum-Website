@@ -1,0 +1,115 @@
+@import "../main";
+@import "../global/header";
+
+.introduction {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1em;
+	text-align: center;
+
+	&__text {
+		margin-top: 1em;
+		line-height: 1.8em;
+	}
+
+	&__heading,
+	&__text {
+		max-width: 500px;
+	}
+}
+
+
+.certificate {
+    display: grid;
+    justify-items: center;
+    gap: 2em;
+    padding: 5em 1em;
+
+    &__item {
+        position: relative;
+        padding-bottom: 4em;
+        max-width: 400px;
+        box-shadow: 0px 0px 5px 0px rgba(249,249,249,1);
+        border: 1px solid $border-gray-light;
+        border-radius: 5px;
+    }
+
+    &__image {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    &__name, &__text { 
+        padding-left: 1em;
+    }
+    &__name {
+        margin-top: 1em;
+        font-weight: 700;
+    }
+    &__text{
+        color: $dark-gray;
+    }
+    &__button {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+        padding: 0.5em;
+        border: 0;
+        background: none;
+        cursor: pointer;
+        &--secondary {
+            right: 60px;
+        }
+
+        z-index: 0;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 45px;
+            height: 45px;
+            background-color: $primary-background-contrast;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transform-origin: center;
+            transition: transform .3s;
+            z-index: -1;
+        }
+        &:hover {
+            &::before {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
+}
+
+
+
+@media (min-width: 768px) {
+	.introduction {
+		&__heading {
+			font-size: 3rem;
+		}
+		&__text {
+			font-size: 1.8rem;
+		}
+		&__heading,
+		&__text {
+			max-width: 700px;
+		}
+	}
+    .certificate {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .certificate {
+        grid-template-columns: repeat(3,400px);
+        justify-content: space-between;
+    }
+}
+

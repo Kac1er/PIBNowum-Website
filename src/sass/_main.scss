@@ -1,0 +1,44 @@
+@import "./utils/color";
+@import "./utils/resets";
+@import './utils/mixins';
+
+@import "./global/nav";
+@import "./global/clients";
+@import "./global/footer";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: "Mulish", sans-serif;
+}
+button {
+	font-family: "Mulish", sans-serif;
+}
+
+.flex-direction-fix {
+	display: flex;
+}
+
+.fixed-body {
+	overflow: hidden;
+}
+
+.wrapper {
+	max-width: 1400px;
+	width: 100%;
+	margin: 0 auto;
+}

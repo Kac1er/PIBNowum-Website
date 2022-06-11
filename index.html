@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PIBNowum</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+		/>
+		<link rel="stylesheet" href="../dist/css/pages/home.min.css" />
+	</head>
+	<body>
+		<nav class="nav">
+	<div class="nav__container">
+		<button
+			class="nav__burger-button"
+			role="button"
+			aria-label="Hamburger button"
+		>
+			<div class="nav__burger-box">
+				<span class="nav__burger-bar"></span>
+			</div>
+		</button>
+		<a href="../index.html" class="nav__logo">PIBNowum</a>
+		<ul class="nav__list nav__list--desktop">
+			<li class="nav__list-item"><a href="../offer.html">Oferta</a></li>
+			<li class="nav__list-item"><a href="../projects.html">Realizacje</a></li>
+			<li class="nav__list-item"><a href="../about.html">O nas</a></li>
+			<li class="nav__list-item"><a href="../gallery.html">Galeria</a></li>
+			<li class="nav__list-item"><a href="../contact.html">Kontakt</a></li>
+		</ul>
+		<a href="../certificates.html" class="nav__highlighted"
+			><span data-content="Certyfikaty">Certyfikaty</span></a
+		>
+		<ul class="nav__list nav__list--mobile">
+			<li class="nav__list-item"><a href="../offer.html">Oferta</a></li>
+			<li class="nav__list-item"><a href="../projects.html">Realizacje</a></li>
+			<li class="nav__list-item"><a href="../about.html">O nas</a></li>
+			<li class="nav__list-item"><a href="../gallery.html">Galeria</a></li>
+			<li class="nav__list-item"><a href="../contact.html">Kontakt</a></li>
+		</ul>
+	</div>
+</nav>
+
+<script src="../dist/js/nav.min.js"></script>
+
+		<header class="header">
+			<div class="header__container wrapper">
+				<h1 class="header__heading">
+					Wiedza i doświadczenie gwarantem
+					<span class="header__heading--highlighted">sukcesu.</span>
+				</h1>
+				<p class="header__text">
+					Dzięki naszemu zaangażowaniu oraz doświadczeniu zrealizowaliśmy z
+					sukcesem wiele projektów przebudów gazociągów wysokiego oraz średniego
+					ciśnienia dla największych firm budowlanych w Polsce. Postaw na
+					jakość!
+				</p>
+				<span class="flex-direction-fix">
+					<a href="../projects.html" class="header__button">
+						<span data-content="Realizacje">Realizacje</span>
+					</a>
+					<a href="../contact.html" class="header__button header__button--secondary">
+						<span data-content="Kontakt">Kontakt</span>
+					</a>
+				</span>
+				<!-- Ten header arrow trzeba by przeniesc do globalnych styli, i zmienic header arrow na cos innego unikalnego dla kazdej podstrony -->
+				<a href="#main-content" class="header__arrow" aria-label="Przejdź do sekcji głównej"
+					><img src="../dist/assets/icons/global/arrow-down.svg" alt=""
+				/></a>
+			</div>
+		</header>
+		<main class="main" id="main-content">
+			<section class="strengths wrapper">
+				<div class="strengths__item">
+					<img
+						src="../dist/assets/icons/home/strength-1.svg"
+						class="strengths__item-icon"
+						alt=""
+					/>
+					<p class="strengths__item-title">Kompleksowa realizacja</p>
+					<p class="strengths__item-text">
+						Wychodząc naprzeciw wymaganiom runku oferujemy kompleksową
+						realizację projektów przebudów jak również budów nowych gazociągów
+						wysokiego ciśnienia oraz średniego ciśnienia - od projektu do
+						realizacji inwestycji!
+					</p>
+				</div>
+				<div class="strengths__item">
+					<img
+						src="../dist/assets/icons/home/strength-1.svg"
+						class="strengths__item-icon"
+						alt=""
+					/>
+					<p class="strengths__item-title">Profesjonalizm</p>
+					<p class="strengths__item-text">
+						Działalność naszej firmy sięga początku lat dziewięćdziesiątych
+						ubiegłego wieku. Przez wszystkie te lata pracowaliśmy na obecną
+						pozycję na rynku gazowniczym.
+					</p>
+				</div>
+				<div class="strengths__item">
+					<img
+						src="../dist/assets/icons/home/strength-1.svg"
+						class="strengths__item-icon"
+						alt=""
+					/>
+					<p class="strengths__item-title">Szybka realizacja</p>
+					<p class="strengths__item-text">
+						Z nami możesz być pewien terminowej realizacji inwestycji!
+					</p>
+				</div>
+				<div class="strengths__item">
+					<img
+						src="../dist/assets/icons/home/strength-1.svg"
+						class="strengths__item-icon"
+						alt=""
+					/>
+					<p class="strengths__item-title">Wykwalifikowana kadra</p>
+					<p class="strengths__item-text">
+						Jako światowej jakości działalność do realizacji inwestycji
+						posiadamy zespół ambitnych ludzi z doświadczeniem, wykształceniem i
+						uprawnieniami.
+					</p>
+				</div>
+			</section>
+			<section class="about wrapper">
+				<h2 class="about__heading">
+					Jesteśmy grupą profesjonalistów w swoim fachu, zajmujemy się tym od
+					lat.
+				</h2>
+				<p class="about__text">
+					Nasza firma jest dynamicznie rozwijającym się zespołem ambitnych
+					inżynierów ukierunkowanych na przemysł gazowniczy. Korzenie
+					Przedsiębiorstwa Instalacyjno-Budowlanego „NOWUM” siegają lat
+					dziewięćdziesiątych, kiedy to Jan Komsta – ojciec obecnego
+					właściciela, Michała Komsty – rozpoczął działalność w obszarze sieci
+					gazowych.
+				</p>
+				<p class="about__text">
+					Poprzez lata działalności udało mu się rozwinąć firmę, zaszczepiając
+					przy tym zamiłowanie do „błękitnego paliwa” u swojego syna, który to
+					po dziś dzień kontynuuje jego dzieło.
+				</p>
+				<img
+					src="../dist/assets/images/home/about-us-mobile.webp"
+					class="about__image"
+					alt="TODO"
+				/>
+				<a href="../about.html" class="about__button">
+					<span data-content="Czytaj dalej">Czytaj dalej</span>
+				</a>
+			</section>
+			<section class="offer">
+				<div class="offer__container wrapper">
+					<h2 class="offer__heading">Oferowane Usługi</h2>
+					<p class="offer__text">
+						Przedsiębiorstwo Instalacyjno-Budowlane "NOWUM" oferuje atrakcyjne i
+						profesjonalne w wykonaniu usługi.
+					</p>
+					<div class="offer__carousel">
+						<div class="offer__item">
+							<img
+								src="../dist/assets/icons/home/offer-1.svg"
+								class="offer__item-icon"
+								alt=""
+							/>
+							<p class="offer__item-heading">Gazownictwo</p>
+							<p class="offer__item-text">
+								Kompleksowe realizacje projektów związanych z budową i
+								przebudową gazociągów stalowych.
+							</p>
+							<a href="../offer.html" class="offer__item-link">Szczegóły</a>
+						</div>
+						<div class="offer__item">
+							<img
+								src="../dist/assets/icons/home/offer-1.svg"
+								class="offer__item-icon"
+								alt=""
+							/>
+							<p class="offer__item-heading">Projekty Drogowe</p>
+							<p class="offer__item-text">
+								Dobra organizacja pracy oraz doświadczony personel pozwala nam
+								na realizowanie projektów w cięższych warunkach.
+							</p>
+							<a href="../offer.html" class="offer__item-link">Szczegóły</a>
+						</div>
+					</div>
+					<a href="../offer.html" class="offer__button"
+						><span data-content="Sprawdź pełną ofertę"
+							>Sprawdź pełną ofertę</span
+						></a
+					>
+				</div>
+			</section>
+			<section class="projects wrapper">
+				<h2 class="projects__heading">Wyróżnione Projekty</h2>
+				<ul class="projects__filters">
+					<li
+						class="projects__filters-item projects__filters-item--selected"
+						data-category="all"
+						tabindex="0"
+						aria-label=""
+					>
+						Wszystkie
+					</li>
+					<li
+						class="projects__filters-item"
+						data-category="done"
+						tabindex="0"
+						aria-label=""
+					>
+						Zrealizowane
+					</li>
+					<li
+						class="projects__filters-item"
+						data-category="ongoing"
+						tabindex="0"
+						aria-label=""
+					>
+						W trakcie
+					</li>
+				</ul>
+				<a href="../projects.html" class="projects__button"
+					><span data-content="Nasze Projekty">Nasze Projekty</span></a
+				>
+				<div class="projects__container" data-category="all">
+					<div class="projects__item" data-category="ongoing, all">
+						<img
+							src="../dist/assets/images/home/projects-1.webp"
+							class="projects__item-image"
+							alt=""
+						/>
+						<p class="projects__item-heading">Warszawa - Gdańsk | Gazociąg</p>
+						<p class="projects__item-status">W trakcie realizacji</p>
+						<a href="" class="projects__item-link">Zobacz więcej</a>
+					</div>
+					<div class="projects__item" data-category="ongoing, all">
+						<img
+							src="../dist/assets/images/home/projects-1.webp"
+							class="projects__item-image"
+							alt=""
+						/>
+						<p class="projects__item-heading">Szczecin - Gdańsk | Gazociąg</p>
+						<p class="projects__item-status">W trakcie realizacji</p>
+						<a href="" class="projects__item-link">Zobacz więcej</a>
+					</div>
+					<div class="projects__item" data-category="ongoing, all">
+						<img
+							src="../dist/assets/images/home/projects-1.webp"
+							class="projects__item-image"
+							alt=""
+						/>
+						<p class="projects__item-heading">Szczecin - Gdańsk | Gazociąg</p>
+						<p class="projects__item-status">W trakcie realizacji</p>
+						<a href="" class="projects__item-link">Zobacz więcej</a>
+					</div>
+					<div class="projects__item" data-category="done, all">
+						<img
+							src="../dist/assets/images/home/projects-1.webp"
+							class="projects__item-image"
+							alt=""
+						/>
+						<p class="projects__item-heading">Lublin - Gdańsk | Gazociąg</p>
+						<p class="projects__item-status">W trakcie realizacji</p>
+						<a href="" class="projects__item-link">Zobacz więcej</a>
+					</div>
+
+					<div class="projects__item" data-category="done, all">
+						<img
+							src="../dist/assets/images/home/projects-1.webp"
+							class="projects__item-image"
+							alt=""
+						/>
+						<p class="projects__item-heading">Besko - Gdańsk | Gazociąg</p>
+						<p class="projects__item-status">W trakcie realizacji</p>
+						<a href="" class="projects__item-link">Zobacz więcej</a>
+					</div>
+					<div class="projects__item" data-category="done, all">
+						<img
+							src="../dist/assets/images/home/projects-1.webp"
+							class="projects__item-image"
+							alt=""
+						/>
+						<p class="projects__item-heading">Besko - Gdańsk | Gazociąg</p>
+						<p class="projects__item-status">W trakcie realizacji</p>
+						<a href="" class="projects__item-link">Zobacz więcej</a>
+					</div>
+				</div>
+			</section>
+			<section class="collaboration">
+				<div class="collaboration__container wrapper">
+					<h2 class="collaboration__heading">
+						Interesuje cię nasza oferta? Dogadajmy się!
+					</h2>
+					<p class="collaboration__text">
+						Odpowiemy na każde twoje pytanie i razem znajdziemy najlepszą ofertę
+						dopasowaną do twoich potrzeb!
+					</p>
+					<a href="../contact.html" class="collaboration__button"
+						><span data-content="Porozmawiajmy!">Porozmawiajmy!</span></a
+					>
+				</div>
+			</section>
+			<section class="clients wrapper">
+	<h2 class="clients__heading">Zaufały nam firmy z całego świata</h2>
+	<p class="clients__text">
+		Od wielu lat współpracujemy ze świetnymi markami z całego świata, dzięki
+		naszemu doświadczeniu współpraca zawsze jest owocna.
+	</p>
+	<div class="clients__container">
+		<img
+			class="clients__item"
+			src="../dist/assets/images/global/client-apple.webp"
+			alt=""
+		/>
+		<img
+			class="clients__item"
+			src="../dist/assets/images/global/client-playstation.webp"
+			alt=""
+		/>
+		<img
+			class="clients__item"
+			src="../dist/assets/images/global/client-apple.webp"
+			alt=""
+		/>
+		<img
+			class="clients__item"
+			src="../dist/assets/images/global/client-xbox.webp"
+			alt=""
+		/>
+		<img
+			class="clients__item"
+			src="../dist/assets/images/global/client-apple.webp"
+			alt=""
+		/>
+		<img
+			class="clients__item"
+			src="../dist/assets/images/global/client-xbox.webp"
+			alt=""
+		/>
+		<img
+			class="clients__item"
+			src="../dist/assets/images/global/client-playstation.webp"
+			alt=""
+		/>
+		<img
+			class="clients__item"
+			src="../dist/assets/images/global/client-apple.webp"
+			alt=""
+		/>
+		<img
+			class="clients__item"
+			src="../dist/assets/images/global/client-xbox.webp"
+			alt=""
+		/>
+	</div>
+</section>
+
+		</main>
+		<footer class="footer">
+	<div class="footer__container wrapper">
+		<h2 class="footer__brand">PIBNowum</h2>
+		<p class="footer__text">
+			Od wielu lat współpracujemy ze świetnymi markami z całego świata, dzięki
+			naszemu doświadczeniu współpraca zawsze jest owocna.
+		</p>
+		<h3 class="footer__section-heading">kontakt</h3>
+		<div class="footer__contact">
+			<div class="footer__contact-item">
+				<img
+					src="../dist/assets/icons/global/footer-phone.svg"
+					alt=""
+					class="footer__contact-item-icon"
+				/>
+				<p class="footer__contact-item-title">Numer telefonu</p>
+				<p class="footer__contact-item-text">+48 123 456 789</p>
+			</div>
+			<div class="footer__contact-item">
+				<img
+					src="../dist/assets/icons/global/footer-mail.svg"
+					alt=""
+					class="footer__contact-item-icon"
+				/>
+				<p class="footer__contact-item-title">Adres e-mail</p>
+				<p class="footer__contact-item-text">biuro@pibnowum.pl</p>
+			</div>
+			<div class="footer__contact-item">
+				<img
+					src="../dist/assets/icons/global/footer-clock.svg"
+					alt=""
+					class="footer__contact-item-icon"
+				/>
+				<p class="footer__contact-item-title">Godziny otwarcia</p>
+				<p class="footer__contact-item-text">Pon - Pt: 9:00 - 18:00</p>
+			</div>
+			<div class="footer__contact-item">
+				<img
+					src="../dist/assets/icons/global/footer-location.svg"
+					alt=""
+					class="footer__contact-item-icon"
+				/>
+				<p class="footer__contact-item-title">Adres</p>
+				<p class="footer__contact-item-text">
+					ul. Sanocka 56/5 38-480 Sieniawa
+				</p>
+			</div>
+		</div>
+		<ul class="footer__navigation">
+			<li class="footer__navigation-item"><a href="../gallery.html">Galeria</a></li>
+			<li class="footer__navigation-item"><a href="../projects.html">Realizacje</a></li>
+			<li class="footer__navigation-item"><a href="../offer.html">Oferta</a></li>
+			<li class="footer__navigation-item"><a href="../contact.html">Kontakt</a></li>
+			<li class="footer__navigation-item"><a href="../certificates.html">Certyfikaty</a></li>
+			<li class="footer__navigation-item"><a href="../about.html">O nas</a></li>
+		</ul>
+		<p class="footer__author">2022 - Kacper Bałuszyński</p>
+	</div>
+</footer>
+
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<script src="../dist/js/home.min.js"></script>
+		<script src="../dist/js/main.min.js"></script>
+	</body>
+</html>

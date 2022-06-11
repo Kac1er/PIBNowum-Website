@@ -1,0 +1,93 @@
+.clients {
+    position: relative;
+    padding: 5em 1em;
+    &__heading, &__text {
+        max-width: 350px;
+    }
+    &__text {
+        margin-top: 1em;
+    }
+    &__container {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    &__item {
+        margin: 0 0.5em;
+        width: 60px;
+    }
+
+    &::before {
+        content: url('../../../dist/assets/images/global/clients-decoration-1.webp');
+        position: absolute;
+        left: 50%;
+        top: -20px;
+        transform: scale(0.5) translateX(-50%);
+        z-index: -1;
+    }
+    &::after {
+        content: url('../../../dist/assets/images/global/clients-decoration-2.webp');
+        position: absolute;
+        left: -30px;
+        bottom: -50px;
+        transform: scale(0.5) rotate(-45deg);
+        z-index: -1;
+    }
+}
+
+@media (min-width: 768px) {
+    .clients {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        &__heading, &__text {
+            grid-column: 1/2;
+        }
+        &__text {
+            margin-top: 0;
+        }
+        &__container {
+            grid-column: 2/3;
+            grid-row: 1 / span 2;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 1em;
+            margin-top: 0;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .clients {
+        &__heading {
+            font-size: 3.2rem;
+        }
+        &__text {
+            margin-top: 1em;
+        }
+        &__container {
+            grid-row: 1 / span 3;
+            justify-items: end;
+            gap: 2em;
+        }
+        &__item {
+            width: 80px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .clients {
+        &__heading, &__text {
+            max-width: 450px;
+        }
+        &__text {
+            font-size: 1.8rem;
+        }
+        &__heading {
+            font-size: 3.4rem;
+        }
+        &::after {
+            transform: scale(0.7) rotate(-45deg);
+        }
+    }
+}

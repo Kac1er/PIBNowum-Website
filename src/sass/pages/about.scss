@@ -1,0 +1,274 @@
+@import "../main";
+@import "../global/header";
+
+
+
+.introduction {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 1em;
+	text-align: center;
+
+	&__text {
+		margin-top: 1em;
+		line-height: 1.8em;
+	}
+
+	&__heading,
+	&__text {
+		max-width: 500px;
+	}
+}
+
+.about {
+	padding: 3em 1em;
+	&__container {
+		display: grid;
+
+		max-width: 550px;
+		margin: 0 auto;
+		row-gap: 1.5em;
+	}
+	&__container:not(:first-child) {
+		margin-top: 4em;
+	}
+	&__heading {
+		font-size: 2.4rem;
+	}
+	&__text {
+		line-height: 1.8em;
+	}
+	&__link {
+		justify-self: start;
+		display: flex;
+		align-items: center;
+		gap: 0.3em;
+		text-decoration: none;
+		color: $primary-color;
+
+		font-weight: 600;
+
+		span {
+			padding-top: 0.1em;
+			transition: transform 0.5s;
+		}
+
+		&:hover {
+			span {
+				transform: translateX(10px);
+			}
+		}
+	}
+}
+
+.stats {
+	position: relative;
+	padding: 5em 0;
+	background-color: #000;
+	overflow-x: hidden;
+	z-index: 0;
+	&::before {
+		content: "PIBNOWUM";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		color: #fff;
+		font-size: 7rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		transform: translate(-50%, -50%) rotate(90deg);
+		opacity: 0.2;
+		z-index: -1;
+	}
+
+	&__container {
+		display: grid;
+		align-items: center;
+		row-gap: 2em;
+		height: 100%;
+	}
+	&__score {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: #fff;
+		text-transform: uppercase;
+		span {
+			color: $primary-color;
+			font-weight: 700;
+			font-size: 5.2rem;
+		}
+	}
+}
+
+.team {
+	padding: 4em 1em;
+
+	&__heading {
+		margin: 0 auto;
+		max-width: 600px;
+		text-align: center;
+	}
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1em;
+		margin-top: 2em;
+	}
+	&__member {
+		padding: 0.5em 1em;
+		background-color: $light-gray;
+		text-align: center;
+		&-name {
+			font-size: 2rem;
+			font-weight: 700;
+		}
+	}
+}
+
+@media (min-width: 550px) {
+	.team {
+		&__container {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.introduction {
+		&__heading {
+			font-size: 3rem;
+		}
+		&__text {
+			font-size: 1.8rem;
+		}
+		&__heading,
+		&__text {
+			max-width: 700px;
+		}
+	}
+	.stats {
+		padding: 7em 0;
+
+		&::before {
+			font-size: 10rem;
+			letter-spacing: 0.3em;
+			transform: translate(-50%, -50%);
+		}
+		&__container {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		&__score {
+			span {
+				font-size: 6.2rem;
+			}
+		}
+	}
+	.about {
+		margin-top: 2em;
+		&__container {
+			position: relative;
+			grid-template-columns: repeat(2, 1fr);
+			row-gap: 1em;
+			column-gap: 2em;
+			max-width: unset;
+
+			&--reversed {
+				.about {
+					&__image {
+						grid-column: 2/3;
+					}
+					&__heading,
+					&__text,
+					&__link {
+						grid-column: 1/2;
+					}
+				}
+			}
+		}
+		&__heading,
+		&__text,
+		&__link {
+			grid-column: 2/3;
+		}
+		&__image {
+			position: absolute;
+			height: 400px;
+			object-fit: cover;
+			grid-column: 1/2;
+			grid-row: 1/4;
+		}
+		&__link {
+			font-size: 2rem;
+		}
+	}
+	.stats {
+		margin-top: 2em;
+	}
+	.team {
+		&__container {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.about {
+		&__container:not(:first-child) {
+			margin-top: 7em;
+		}
+		&__heading {
+			font-size: 3rem;
+		}
+		&__text {
+			font-size: 1.7rem;
+		}
+	}
+	.team {
+		&__container {
+			margin-top: 4em;
+			justify-content: center;
+		}
+		&__member {
+			padding: 1em;
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.about {
+		&__container:not(:first-child) {
+			margin-top: 8em;
+		}
+		&__text {
+			max-width: 600px;
+		}
+	}
+	.stats {
+		margin-top: 3em;
+
+		&__score {
+			span {
+				font-size: 9rem;
+			}
+		}
+		&::before {
+			left: 52%;
+			font-size: 12rem;
+			letter-spacing: 1em;
+		}
+	}
+	.team {
+		padding: 5em 1em;
+		&__container {
+			gap: 2em;
+		}
+		&__member {
+			padding: 2em 0;
+
+			&-name {
+				font-size: 2.4rem;
+			}
+		}
+	}
+}

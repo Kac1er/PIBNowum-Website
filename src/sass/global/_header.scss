@@ -1,0 +1,65 @@
+//These styles can and should only be applied to hero sections on subpages, the main page has separate styles.
+:root {
+	--hero-img-mobile: "";
+	--hero-img-desktop: "";
+}
+
+.header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 8em 1em 3em 1em;
+
+	&__heading,
+	&__prefix {
+		text-align: center;
+	}
+
+	&__heading {
+		font-size: 2.4rem;
+		max-width: 500px;
+	}
+	&__prefix {
+		text-transform: uppercase;
+	}
+	&__image {
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		margin-top: 2em;
+	}
+}
+
+@media (min-width: 768px) {
+	.header {
+		gap: 0.5em;
+        padding: 8em 1em 4em 1em;
+        &__heading {
+            font-size: 3rem;
+        }
+        &__prefix {
+            font-size: 1.8rem;
+        }
+	}
+}
+
+@media (min-width: 1024px) {
+    .header {
+        &__heading {
+            max-width: 600px;
+        }
+        &__image {
+            content: url('https://picsum.photos/1920/1080?random=1');
+            height: 400px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        &__heading {
+            font-size: 3.6rem;
+        }
+    }
+}

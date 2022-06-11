@@ -1,0 +1,557 @@
+@import "../main";
+
+//Hero section
+.header {
+	&__container {
+		display: flex;
+		flex-direction: column;
+
+		align-items: flex-start;
+		gap: 2em;
+	}
+
+	position: relative;
+
+	background: url("../../../dist/assets/images/home/hero-mobile.webp") no-repeat center center;
+	background-size: cover;
+
+	padding: 10em 1em;
+
+	z-index: 0;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: -1;
+	}
+
+	&__heading,
+	&__text {
+		color: #fff;
+		
+	
+	
+	}
+	&__heading {
+		position: relative;
+		font-size: 3.2rem;
+		font-weight: 700;
+		z-index: 0;
+		&--highlighted {
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 5px;
+				left: 0px;
+				height: 10px;
+				width: 100%;
+				background-color: $primary-color;
+				opacity: 0.7;
+				z-index: -1;
+			}
+		}
+	}
+	&__button {
+		@include buttonStyles("primary");
+		padding: 0.2em 1.5em;
+		display: flex;
+		align-items: center;
+		column-gap: 0.5em;
+		margin-top: 0.5em;
+		
+	
+
+		&--secondary {
+			margin-left: 1em;
+			@include buttonStyles("secondary");
+		}
+	}
+	&__arrow {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		animation: headerArrowAnimation 2.5s ease-in-out infinite alternate;
+	}
+}
+
+.strengths {
+	padding: 4em 0;
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.7em;
+		width: 100%;
+		text-align: center;
+
+		&-title {
+			font-size: 2.2rem;
+			font-weight: 500;
+		}
+		&-text {
+			max-width: 350px;
+		}
+	}
+}
+.about {
+	display: grid;
+	justify-items: center;
+	gap: 1em;
+	padding: 10em 1em;
+
+	&__heading,
+	&__text {
+		text-align: center;
+		max-width: 500px;
+	}
+	&__text {
+		line-height: 1.8em;
+	}
+	&__image {
+		margin-top: 2em;
+	}
+	&__button {
+		@include buttonStyles("primary");
+		padding: 1em 1.5em;
+	}
+}
+.offer {
+	padding: 5em 1em;
+	background-color: #000;
+	&__container {
+		position: relative;
+		display: grid;
+		&::before {
+			content: url("../../../dist/assets/images/home/offer-decoration-1-mobile.svg");
+			position: absolute;
+			top: 50px;
+			left: 50px;
+		}
+		&::after {
+			content: url("../../../dist/assets/images/home/offer-decoration-2-mobile.svg");
+			position: absolute;
+			bottom: 50px;
+			right: 50px;
+		}
+	}
+	&__heading,
+	&__text {
+		text-align: center;
+		color: #fff;
+	}
+	&__heading {
+		font-size: 3.2rem;
+	}
+	&__text {
+		margin-top: 0.4em;
+		max-width: 400px;
+		margin-inline: auto;
+	}
+	&__button {
+		@include buttonStyles("secondary");
+		padding: 1em 1.5em;
+		justify-self: center;
+		margin-top: 5em;
+	}
+
+	&__carousel {
+		margin-top: 3em;
+		padding-bottom: 2em;
+	}
+	.flickity-page-dots {
+		.dot {
+			background-color: #fff;
+		}
+	}
+	&__item {
+		position: relative;
+		padding: 2em 1em;
+		margin-right: 1em;
+		width: 100%;
+		min-height: 300px;
+		background-color: #fff;
+		border-radius: 6px;
+		z-index: 1;
+		&-heading {
+			margin-top: 1em;
+			font-size: 2.4rem;
+			font-weight: 700;
+		}
+		&-text {
+			margin-top: 0.5em;
+			font-size: 1.7rem;
+		}
+		&-link {
+			position: absolute;
+			bottom: 20px;
+			color: $primary-color;
+			font-weight: 600;
+			text-decoration: none;
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1.5px;
+				background-color: $primary-color;
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 0.3s;
+			}
+			&:hover::before {
+				transform: scaleX(1);
+			}
+		}
+	}
+}
+.projects {
+	position: relative;
+	padding: 5em 1em;
+
+	&__filters {
+		display: flex;
+		gap: 1.5em;
+		margin-top: 1em;
+		list-style: none;
+
+		&-item {
+			position: relative;
+			cursor: pointer;
+			&--selected {
+				border-bottom: 1px solid #000;
+			}
+		}
+
+		&-item:not(.projects__filters-item--selected) {
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 0.5px;
+				background-color: #000;
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 0.3s;
+			}
+			&:hover::before {
+				transform: scaleX(1);
+			}
+		}
+	}
+	&__container {
+		margin-top: 1.5em;
+		padding-bottom: 1.5em;
+	}
+	&__item {
+		margin: 0 0.5em;
+		padding-bottom: 1.5em;
+		width: 100%;
+		max-width: 350px;
+		background-color: #fff;
+		border: 1px solid $border-gray-medium;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+
+		&--ongoing {
+			background-color: green;
+		}
+		&-heading {
+			margin-top: 1em;
+			font-weight: 700;
+		}
+		&-heading,
+		&-status,
+		&-link {
+			margin-left: 1em;
+		}
+		&-status {
+			margin-bottom: 2em;
+			color: $border-gray-dark;
+		}
+		&-link {
+			padding-bottom: 0.2em;
+			color: $primary-color;
+			border-bottom: 1px solid $primary-color;
+			text-decoration: none;
+		}
+	}
+	&__button {
+		display: none;
+	}
+}
+
+.collaboration {
+	position: relative;
+	padding: 3em 1em;
+	margin: 3em 0;
+	background-image: url("../../../dist/assets/images/home/collaboration-mobile.webp");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 0;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -1;
+	}
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5em;
+	}
+	&__button {
+		@include buttonStyles("primary");
+		padding: 0.8em 1.5em;
+	}
+	&__heading,
+	&__text {
+		color: #fff;
+		text-align: center;
+		max-width: 400px;
+	}
+	&__heading {
+		font-size: 3rem;
+	}
+}
+@media screen and (min-width: 500px) {
+	.header {
+		&__heading,
+		&__text {
+			max-width: 500px;
+		}
+	}
+	.offer {
+		&__item {
+			&-text {
+				max-width: 400px;
+			}
+		}
+	}
+	.collaboration {
+		&__heading {
+			font-size: 3.2rem;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.strengths {
+		&__item {
+			width: 50%;
+		}
+	}
+	.about {
+		grid-template-columns: repeat(2, 1fr);
+
+		gap: 0;
+		row-gap: 1em;
+		justify-items: start;
+		align-items: center;
+		&__heading,
+		&__text,
+		&__button {
+			grid-column: 1/2;
+			text-align: left;
+		}
+		&__heading {
+			grid-row: 1/2;
+		}
+		&__image {
+			grid-column: 2/3;
+			grid-row: 1 / span 4;
+			justify-self: end;
+		}
+	}
+	.offer {
+		&__item {
+			max-width: 400px;
+			min-height: 300px;
+		}
+		&__carousel {
+			display: flex;
+			justify-content: center;
+			gap: 4em;
+		}
+	}
+	.projects {
+		&__heading {
+			font-size: 3.2rem;
+		}
+		&__item {
+			max-width: 30%;
+		}
+		&__button {
+			display: block;
+			@include buttonStyles("primary");
+			padding: 0.5em 1em;
+			position: absolute;
+			right: 20px;
+			top: 50px;
+		}
+		&__container {
+			margin-top: 4em;
+		}
+	}
+	.collaboration {
+		padding: 8em 0;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.header {
+		&__heading,
+		&__text {
+			max-width: 600px;
+		}
+		&__heading {
+			font-size: 3.6rem;
+		}
+		&__text {
+			font-size: 2rem;
+		}
+		&__button {
+			font-size: 2rem;
+			padding: 0.5em 1.5em;
+		}
+	}
+	.about {
+		&__heading {
+			font-size: 2.8rem;
+		}
+		&__image {
+			width: 400px;
+		}
+	}
+	.offer {
+		&__container {
+			&::before {
+				content: url("../../../dist/assets/images/home/offer-decoration-1-desktop.svg");
+				left: 100px;
+				top: 20px;
+			}
+			&::after {
+				content: url("../../../dist/assets/images/home/offer-decoration-2-desktop.svg");
+				right: 150px;
+				bottom: 20px;
+			}
+		}
+	}
+	.collaboration {
+		background-image: url("../../../dist/assets/images/home/collaboration-desktop.webp");
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.header {
+		padding: 15em 1em;
+		background-image: url("../../../dist/assets/images/home/hero-desktop.webp");
+
+		&__heading {
+			max-width: 900px;
+			font-size: 5.2rem;
+		}
+	}
+	.strengths {
+		&__item {
+			width: 33%;
+		}
+	}
+	.about {
+		row-gap: 0;
+		padding: 14em 1em;
+		&__image {
+			width: 600px;
+			content: url("../../../dist/assets/images/home/about-us-desktop.webp");
+		}
+		&__heading {
+			font-size: 3rem;
+		}
+		&__text {
+			align-self: flex-start;
+			font-size: 1.8rem;
+		}
+		&__button {
+		
+			font-size: 1.8rem;
+			padding: 0.5em 1.5em;
+		}
+	}
+	.offer {
+		&__heading {
+			font-size: 4.2rem;
+		}
+		&__item {
+			padding: 2em;
+			min-height: 350px;
+
+			&-link {
+				font-size: 1.8rem;
+			}
+			&-heading {
+				font-size: 2.8rem;
+			}
+			&-text {
+				font-size: 1.8rem;
+			}
+		}
+		&__button {
+			padding: 0.8em 1.5em;
+		}
+	}
+	.projects {
+		padding: 8em 1em;
+
+		&__button {
+			top: 130px;
+		}
+	}
+	.collaboration {
+		&__heading {
+			font-size: 3.8rem;
+			max-width: 600px;
+		}
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1400px) {
+	.header {
+		&__heading {
+			font-size: 5.8rem;
+		}
+	}
+	.strengths {
+		display: flex;
+		justify-content: space-between;
+		gap: 3em;
+
+		border-bottom: 2px solid $border-gray-light;
+	}
+}
+
+@keyframes headerArrowAnimation {
+	to {
+		transform: translate(-50%, -30px);
+	}
+}
+
